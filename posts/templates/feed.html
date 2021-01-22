@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlatziGram</title>
+  </head>
+  <body>
+    <br />
+    <div>
+      {% for post in posts %}
+      <div>
+        <div>
+          <img src="{{ post.user.picture }}" alt="{{  post.user.name }}" />
+          <div>
+            <h5>{{ post.title }}</h5>
+            {{ post.timestamp }}
+          </div>
+        </div>
+        <img src="{{ post.photo }}" alt="{{ post.title }}" />
+        <h6>{{ post.title }}</h6>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
