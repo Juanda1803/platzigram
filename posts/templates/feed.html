@@ -2,25 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlatziGram</title>
+    <title>Platzigram</title>
+    <link rel="stylesheet" href="./feed.css" />
   </head>
   <body>
-    <br />
-    <div>
-      {% for post in posts %}
-      <div>
-        <div>
-          <img src="{{ post.user.picture }}" alt="{{  post.user.name }}" />
-          <div>
-            <h5>{{ post.title }}</h5>
-            {{ post.timestamp }}
+    <div class="posts">
+      <div class="posts-container">
+        {% for post in posts %}
+        <div class="post-item">
+          <div class="post-item__header">
+            <img src="{{post.user.picture}}" alt="{{post.user.name}}" />
+            <div class="post-item__header--title">
+              <h5>{{post.user.name}}</h5>
+              {{post.timestamp}}
+            </div>
+          </div>
+          <div class="post-item__content">
+            <figure>
+              <img src="{{post.photo}}" alt="{{post.title}}" />
+            </figure>
+            <h6>{{post.title}}</h6>
           </div>
         </div>
-        <img src="{{ post.photo }}" alt="{{ post.title }}" />
-        <h6>{{ post.title }}</h6>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </body>
 </html>
