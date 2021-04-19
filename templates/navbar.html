@@ -1,0 +1,32 @@
+{% load static %}
+<nav class="navbar" id="main-navbar">
+  <div class="navbar-container">
+    <a class="navbar__logo" href="">
+      <img
+        src="{% static 'icons/instagram.png' %}"
+        height="45"
+        class="navbar__logo-img"
+      />
+    </a>
+
+    <ul class="navbar__list">
+      <li class="navbar-list__item-profile">
+        <a href="">
+          <img src="{% static 'icons/default-profile.png' %}" height="35" />
+        </a>
+      </li>
+
+      <li class="navbar-list__item">
+        <a href="/users/login">
+          <img src="{% static 'icons/add.png' %}" height="35" />
+        </a>
+      </li>
+
+      <li class="navbar-list__item">
+        <a href="{% url 'logout' %}">
+          <img src="{% static 'icons/sign-out.png' %}" height="35" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

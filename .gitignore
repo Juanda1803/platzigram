@@ -178,7 +178,14 @@ Icon
 # Thumbnails
 ._*
 
-.vscode/
+.vscode
+media/
+
+# Static
+*.png
+*.jpg
+*.jpeg
+*.svg
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100

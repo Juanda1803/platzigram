@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    {% block head_content %}{% endblock %} {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/users.css' %}" />
+  </head>
+  <body>
+    <div class="users">
+      <div class="users-container">
+        <div class="users-container__form" id="auth-container">
+          <img
+            src="{% static 'icons/instagram.png' %}"
+            class="img-fluid rounded mx-auto d-block pb-4"
+            style="max-width: 60%"
+          />
+          {% block container %}{% endblock%}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

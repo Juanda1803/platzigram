@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block head_content %}{% endblock %} {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/global.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/posts.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'styles/media/tablet.css' %}"
+      media="(max-width: 680px)"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'styles/media/desktop.css' %}"
+      media="(max-width: 800px)"
+    />
+  </head>
+  <body>
+    {% include "navbar.html" %} {% block container %} {% endblock %}
+  </body>
+</html>
